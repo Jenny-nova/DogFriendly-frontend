@@ -23,10 +23,8 @@ Actualmente la aplicación funciona con datos guardados en una **base de datos M
 ---
 
 ## 3. URLs de GitHub
-- **Repositorio Front-end:** https://github.com/tu-usuario/DogFriendly-frontend  
-- **Repositorio Back-end:** https://github.com/tu-usuario/DogFriendly-backend  
-
-*(Reemplaza “tu-usuario” por tu usuario real de GitHub.)*
+- **Repositorio Front-end:** https://github.com/Jenny-nova/DogFriendly-frontend.git 
+- **Repositorio Back-end:** https://github.com/Jenny-nova/DogFriendly-backend.git 
 
 ---
 
