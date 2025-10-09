@@ -13,12 +13,8 @@ Actualmente la aplicación funciona con datos guardados en una **base de datos M
 ---
 
 ## 2. URLs Activas
-- **Front-end (local):** [http://localhost:3000](http://localhost:3000)  
-- **Back-end (local):** [http://127.0.0.1:8000](http://127.0.0.1:8000)  
-
-> Para desplegar online:
-> - **Front-end:** Netlify o Vercel  
-> - **Back-end:** Render  
+- **Front-end (local):** dog-friendly-frontend.vercel.app  
+- **Back-end (local):** dog-friendly-backend.vercel.app
 
 ---
 
