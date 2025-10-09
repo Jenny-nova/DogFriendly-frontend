@@ -43,19 +43,21 @@ Actualmente la aplicación funciona con datos guardados en una **base de datos M
 
 ## 5. Lugares de ejemplo cargados en la base de datos
 
-| Nombre | Dirección | Ciudad | País |
-|--------|-----------|--------|------|
-| La Perrera Café | Calle del Sol 23 | Bilbao | España |
-| Dog&Go Tapas | Calle Gran Vía 22 | Madrid | España |
-| PetFriendly Bar Sevilla | Calle Feria 5 | Sevilla | España |
-| El Rincón Canino | Carrer de Mallorca 210 | Barcelona | España |
-| Woof Coffee | Carrer de Blai 15 | Barcelona | España |
-| Patas & Copas | Avenida del Puerto 44 | Valencia | España |
-| El Jardín Peludo | Calle de la Paz 8 | Valencia | España |
-| Café Canino | Rúa Real 30 | A Coruña | España |
-| Mar y Huellas | Praza do Obradoiro 2 | Santiago de Compostela | España |
-| Playa y Pata | Avenida Andalucía 56 | Cádiz | España |
-| Perruno Bar | Calle Ancha 12 | Cádiz | España |
+| Nombre                   | Dirección                | Ciudad                | País    |
+|--------------------------|-------------------------|----------------------|--------|
+| Restaurante Patitas Felices | Calle Mayor 1          | Bilbao               | España |
+| Café Peludo              | Plaza Nueva 5           | Bilbao               | España |
+| La Huella                | Calle del Sol 10        | Madrid               | España |
+| Perrito Feliz            | Avenida Libertad 20     | Sevilla              | España |
+| El Rincón Canino         | Carrer de Mallorca 210  | Barcelona            | España |
+| Woof Coffee              | Carrer de Blai 15       | Barcelona            | España |
+| Patas & Copas            | Avenida del Puerto 44   | Valencia             | España |
+| El Jardín Peludo         | Calle de la Paz 8       | Valencia             | España |
+| Café Canino              | Rúa Real 30             | A Coruña             | España |
+| Mar y Huellas            | Praza do Obradoiro 2    | Santiago de Compostela | España |
+| Playa y Pata             | Avenida Andalucía 56    | Cádiz                | España |
+| Perruno Bar              | Calle Ancha 12          | Cádiz                | España |
+
 
 ---
 
