@@ -13,8 +13,8 @@ Actualmente la aplicación funciona con datos guardados en una **base de datos M
 ---
 
 ## 2. URLs Activas
-- **Front-end (local):** dog-friendly-frontend.vercel.app  
-- **Back-end (local):** dog-friendly-backend.vercel.app
+- **Front-end (local):** http://localhost:3000 ó dog-friendly-frontend.vercel.app  
+- **Back-end (local):** http://127.0.0.1:8000 ó dog-friendly-backend.vercel.app
 
 ---
 
