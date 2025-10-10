@@ -1,54 +1,49 @@
 # 🐾 Proyecto Final – DogFriendly
 
 ## 1. Descripción del Proyecto
-**DogFriendly** es una aplicación web que permite a cualquier persona **encontrar restaurantes pet-friendly** en distintas ciudades de España.  
+**DogFriendly** es una aplicación web con la cual se pretende que cualquier persona **encontrar restaurantes pet-friendly** en distintas ciudades de España.  
 
 Los usuarios pueden:  
 - **Registrarse** introduciendo un nombre y correo electrónico, que se guarda en la base de datos. Tras registrarse, la app muestra un **mensaje de bienvenida personalizado**.  
 - **Probar la aplicación como invitado**, sin necesidad de registro.  
 - **Filtrar lugares por ciudad** y ver el listado con: nombre, dirección, ciudad y país.  
 
-Actualmente la aplicación funciona con datos guardados en una **base de datos MySQL**.
+Actualmente la aplicación funciona con datos guardados en una **base de datos PostgreSQL en Neon**.
 
 ---
 
 ## 2. URLs Activas
-- **Front-end (local):** http://localhost:3000 ó dog-friendly-frontend.vercel.app  
-- **Back-end (local):** http://127.0.0.1:8000 ó dog-friendly-backend.vercel.app
+- **Front-end:** [https://dog-friendly-frontend.vercel.app](https://dog-friendly-frontend.vercel.app)  
+- **Back-end:** [https://dogfriendly-backend.onrender.com](https://dogfriendly-backend.onrender.com)
 
 ---
 
 ## 3. URLs de GitHub
-- **Repositorio Front-end:** https://github.com/Jenny-nova/DogFriendly-frontend.git 
-- **Repositorio Back-end:** https://github.com/Jenny-nova/DogFriendly-backend.git 
+- **Repositorio Front-end:** [https://github.com/Jenny-nova/DogFriendly-frontend.git](https://github.com/Jenny-nova/DogFriendly-frontend.git)  
+- **Repositorio Back-end:** [https://github.com/Jenny-nova/DogFriendly-backend.git](https://github.com/Jenny-nova/DogFriendly-backend.git)
 
 ---
 
 ## 4. Usuarios de prueba y rutas
 
 - **Usuario Invitado:** no requiere registro ni contraseña.  
-- **Usuario Registrado:** cualquier nombre y correo introducido se guarda en la base de datos.
-
-### Base de datos
-- **Motor:** MySQL  
-- **Usuario:** `devuser`  
-- **Base de datos:** `dogfriendly2_0`  
+- **Usuario Registrado:** cualquier nombre y correo introducido se guarda en la base de datos en Neon.
 
 ### Endpoints del backend
 - `GET /places?city=NombreCiudad` → devuelve lugares filtrados por ciudad.  
-- `POST /register` → recibe `{ "name": "Nombre", "email": "correo@ejemplo.com" }` y guarda el usuario.  
-- `GET /users` → devuelve la lista de usuarios registrados.
+- `POST /register` → recibe `{ "username": "Nombre", "email": "correo@ejemplo.com" }` y guarda el usuario.  
+- `GET /usuarios` → devuelve la lista de usuarios registrados.
 
 ---
 
-## 5. Lugares de ejemplo cargados en la base de datos
+## 5. Lugares
+> Todos los lugares mostrados se obtienen en tiempo real de la **base de datos PostgreSQL en Neon**.  
+> Se pueden filtrar por ciudad desde la app. Para ver los datos reales, se recomienda usar la aplicación desplegada.
+
+## Lugares de ejemplo cargados en la base de datos
 
 | Nombre                   | Dirección                | Ciudad                | País    |
 |--------------------------|-------------------------|----------------------|--------|
-| Restaurante Patitas Felices | Calle Mayor 1          | Bilbao               | España |
-| Café Peludo              | Plaza Nueva 5           | Bilbao               | España |
-| La Huella                | Calle del Sol 10        | Madrid               | España |
-| Perrito Feliz            | Avenida Libertad 20     | Sevilla              | España |
 | El Rincón Canino         | Carrer de Mallorca 210  | Barcelona            | España |
 | Woof Coffee              | Carrer de Blai 15       | Barcelona            | España |
 | Patas & Copas            | Avenida del Puerto 44   | Valencia             | España |
@@ -57,8 +52,9 @@ Actualmente la aplicación funciona con datos guardados en una **base de datos M
 | Mar y Huellas            | Praza do Obradoiro 2    | Santiago de Compostela | España |
 | Playa y Pata             | Avenida Andalucía 56    | Cádiz                | España |
 | Perruno Bar              | Calle Ancha 12          | Cádiz                | España |
-
-
+| Restaurante PetFriendly  | Calle 123               | Madrid               | España |
+| Parque Canino            | Avenida Perros 45       | Barcelona            | España |
+| Cafetería Mascotas       | Plaza Mayor 7           | Sevilla              | España |
 ---
 
 ## 6. Herramientas y características
@@ -74,33 +70,49 @@ Actualmente la aplicación funciona con datos guardados en una **base de datos M
 
 ---
 
-## 7. Instrucciones para ejecutar el proyecto
+## 7. Cómo probar la aplicación
 
-### Backend
+### Versiones desplegadas
+- **Front-end:** [https://dog-friendly-frontend.vercel.app](https://dog-friendly-frontend.vercel.app)  
+- **Back-end:** [https://dogfriendly-backend.onrender.com](https://dogfriendly-backend.onrender.com)
+
+### Levantar localmente (opcional)
+Si quieres ejecutar la app en tu máquina:
+
+# Backend
 ```bash
 cd backend
+python -m venv venv       # crear entorno virtual
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### Frontend
-```bash
-cd frontend
+# Frontend
+cd ../frontend
 npm install
 npm start
-```
-### Requisitos
-- Python 3.10+
-- Node.js 20+
-- npm 10+
-- Dependencias principales: FastAPI, SQLAlchemy, PyMySQL, React, Axios
 
----
+### Requisitos
+- **Python:** 3.10+
+- **Node.js:** 20+
+- **npm:** 10+
+- **Dependencias principales Backend:**
+  - FastAPI
+  - SQLAlchemy
+  - psycopg2-binary
+  - pydantic[email]
+  - python-dotenv
+  - uvicorn
+- **Dependencias principales Frontend:**
+  - React
+  - Axios
 
 ## 8. Información adicional
 - La aplicación puede usarse **completamente como invitado**.  
-- Al seleccionar una ciudad, se muestran los **lugares almacenados en la base de datos**.  
-- Los estilos son **modernos y adaptables** a distintas pantallas.  
-- Se agregó un **sistema básico de registro y bienvenida personalizada**.
+- Al seleccionar una ciudad, se muestran los **lugares almacenados en la base de datos Neon**.  
+- Se agregó un **sistema básico de registro y bienvenida personalizada**.  
 
 ### 💡 Futuras mejoras
 - Incorporar un **mapa interactivo** para ubicar restaurantes pet-friendly.  
