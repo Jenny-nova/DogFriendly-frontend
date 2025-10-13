@@ -94,7 +94,7 @@ function App() {
         
         {user && (
           <div>
-            <p>Bienvenido, {user.username}</p>
+            <p>Bienvenid@, {user.username}</p>
             <PlacesList user={user} />
           </div>
         )}
