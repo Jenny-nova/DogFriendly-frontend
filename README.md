@@ -90,9 +90,11 @@ uvicorn main:app --reload
 ```
 
 # Frontend
+```bash
 cd ../frontend
 npm install
 npm start
+```
 
 ### Requisitos
 - **Python:** 3.10+
